@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const communityName = document.getElementById('community-name')?.value || 'Sunrise Apartments';
             
             try {
-                const response = await fetch('https://your-backend.onrender.com/api/users', {
+                const response = await fetch('https://colaborator2.onrender.com/api/users', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({ username, email, password, role: 'RESIDENT', communityName })
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password')?.value || '';
             
             try {
-                const response = await fetch('https://your-backend.onrender.com/api/users/login', {
+                const response = await fetch('https://colaborator2.onrender.com/api/users/login', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({ email, password })
@@ -115,7 +115,7 @@ async function addResidentOrder(crop, qty) {
     const residentId = currentUser ? currentUser.id : 1; // Default to ID 1 if not thoroughly logged in during testing
     
     try {
-        await fetch('https://your-backend.onrender.com/api/orders', {
+        await fetch('https://colaborator2.onrender.com/api/orders', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ cropName: crop, quantity: qty, communityName: userCommunity, residentId: residentId })
@@ -135,7 +135,7 @@ async function renderMyOrders() {
     const residentId = currentUser ? currentUser.id : 1;
     
     try {
-        const res = await fetch(`https://your-backend.onrender.com/api/orders/community/${encodeURIComponent(userCommunity)}`);
+        const res = await fetch(`https://colaborator2.onrender.com/api/orders/community/${encodeURIComponent(userCommunity)}`);
         if (!res.ok) throw new Error('Failed to fetch personal orders');
         const allOrders = await res.json();
         const myOrders = allOrders.filter(o => o.residentId === residentId);
@@ -169,7 +169,7 @@ async function setupCommunityDashboard() {
     const userCommunity = localStorage.getItem('userCommunity') || 'Sunrise Apartments';
     
     try {
-        const res = await fetch(`https://your-backend.onrender.com/api/orders/community/${encodeURIComponent(userCommunity)}`);
+        const res = await fetch(`https://colaborator2.onrender.com/api/orders/community/${encodeURIComponent(userCommunity)}`);
         if (!res.ok) throw new Error('Failed to fetch community aggregation');
         const communityOrders = await res.json();
         
