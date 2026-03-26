@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard | Colaborator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="bg-blob blob-1" style="background: rgba(168, 85, 247, 0.4); width: 600px; height: 600px; top: -200px; left: -200px;"></div>
+    
+    <nav class="navbar">
+        <div class="brand">Colaborator<span>.</span>Resident</div>
+        <div class="nav-links">
+            <span id="nav-community-name" style="color: #c084fc; font-weight: 600; margin-right: 2rem;">Loading...</span>
+            <a href="community-dashboard.html">Network Overview</a>
+            <a href="resident-login.html" class="btn-small btn-outline" style="margin-left: 1rem; padding: 0.4rem 1rem;">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Order Form -->
+            <section class="glass-panel" style="padding: 2rem; margin-bottom: 2rem;">
+                <div class="section-header">
+                    <h2>Place a Fresh Produce Order</h2>
+                </div>
+                <form id="resident-order-form">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="form-group" style="flex: 2; margin-bottom: 0;">
+                            <label for="crop-select">Select Crop</label>
+                            <select id="crop-select" class="form-control" required style="background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); appearance: none; color: white;">
+                                <option value="" disabled selected>Select from available crops</option>
+                                <option value="Tomatoes">Tomatoes</option>
+                                <option value="Potatoes">Potatoes</option>
+                                <option value="Onions">Onions</option>
+                                <option value="Apples">Apples</option>
+                                <option value="Organic Soybeans">Organic Soybeans</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label for="order-qty">Quantity (kg)</label>
+                            <input type="number" id="order-qty" class="form-control" min="1" placeholder="e.g. 5" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="background: linear-gradient(135deg, #a855f7, #ec4899);">Add to My Requirements</button>
+                </form>
+            </section>
+
+            <!-- My Individual Orders -->
+            <section class="glass-panel" style="padding: 2rem;">
+                <div class="section-header">
+                    <h2>My Current Requirements</h2>
+                </div>
+                <div class="demand-list" id="my-orders-list">
+                    <!-- Orders injected by JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
+            <section class="glass-panel" style="padding: 2rem; position: sticky; top: 100px; text-align: center;">
+                <h3 style="margin-bottom: 1rem; color: #f8fafc;">Community Status</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Orders placed here are aggregated and sent directly to local farmers to fulfill community demands collectively.</p>
+                <a href="community-dashboard.html" class="btn-small" style="display: block; background: rgba(168, 85, 247, 0.2); color: #e879f9; padding: 1rem; text-decoration: none; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.4);">View Community Total</a>
+            </section>
+        </aside>
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+</html>

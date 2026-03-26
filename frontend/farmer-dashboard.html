@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Colaborator</title>
+    <meta name="description" content="Dashboard for farmer insights and inventory management.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="bg-blob blob-1" style="width: 600px; height: 600px; top: -200px; left: -200px;"></div>
+    
+    <nav class="navbar">
+        <div class="brand">Colaborator<span>.</span></div>
+        <div class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#">Market Insights</a>
+            <a href="#">Community</a>
+            <a href="login.html" class="btn-small btn-outline" style="margin-left: 1rem; padding: 0.4rem 1rem;">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Seasonal Suggestions -->
+            <section class="glass-panel" style="padding: 2rem; margin-bottom: 2rem;">
+                <div class="section-header">
+                    <h2>Crop Suggestions (Current Season: Summer)</h2>
+                </div>
+                <div class="card-grid">
+                    <div class="glass-panel crop-card">
+                        <div class="crop-icon">🍅</div>
+                        <div class="crop-name">Tomatoes</div>
+                        <div class="crop-meta">High Yield • 60-80 Days</div>
+                    </div>
+                    <div class="glass-panel crop-card">
+                        <div class="crop-icon">🌽</div>
+                        <div class="crop-name">Sweet Corn</div>
+                        <div class="crop-meta">Medium Yield • 90 Days</div>
+                    </div>
+                    <div class="glass-panel crop-card">
+                        <div class="crop-icon">🥒</div>
+                        <div class="crop-name">Cucumbers</div>
+                        <div class="crop-meta">Fast Growth • 50-70 Days</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Crops in Demand -->
+            <section class="glass-panel" style="padding: 2rem;">
+                <div class="section-header">
+                    <h2>Market Demand Insights</h2>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Updated Weekly</span>
+                </div>
+                <div class="demand-list">
+                    <div class="demand-item">
+                        <div class="demand-info">
+                            <h4>Organic Soybeans</h4>
+                            <p class="crop-meta">High demand from local processors</p>
+                        </div>
+                        <div class="demand-trend">
+                            <span style="font-size: 1.2rem;">↑</span> +15% Price
+                        </div>
+                    </div>
+                    <div class="demand-item" style="border-left-color: #3b82f6;">
+                        <div class="demand-info">
+                            <h4>Wheat</h4>
+                            <p class="crop-meta">Steady export demand</p>
+                        </div>
+                        <div class="demand-trend" style="color: #60a5fa;">
+                            <span style="font-size: 1.2rem;">→</span> Steady
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Direct Community Network Orders -->
+            <section class="glass-panel" style="padding: 2rem; margin-top: 2rem; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);">
+                <div class="section-header">
+                    <div>
+                        <h2><span style="color: #c084fc;">★</span> Direct Community Orders</h2>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Aggregated demand from local networked apartments/communities</span>
+                    </div>
+                </div>
+                <div class="demand-list" id="farmer-community-orders-list">
+                    <!-- Javascript will inject aggregated totals for all communities here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
+            <!-- Manage Available Crops -->
+            <section class="glass-panel" style="padding: 2rem; position: sticky; top: 100px;">
+                <div class="section-header">
+                    <h2>My Crops Available</h2>
+                </div>
+                
+                <form id="add-crop-form">
+                    <div class="form-group">
+                        <label for="crop-name">Crop Name</label>
+                        <input type="text" id="crop-name" class="form-control" placeholder="e.g. Potatoes" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crop-qty">Quantity / Unit</label>
+                        <input type="text" id="crop-qty" class="form-control" placeholder="e.g. 500 kg" required>
+                    </div>
+                    <button type="submit" class="btn-primary" style="padding: 0.8rem;">List Crop for Sale</button>
+                </form>
+
+                <div class="available-list" id="available-crops-list">
+                    <!-- Default mock item -->
+                    <div class="crop-item">
+                        <div class="crop-info">
+                            <h4>Apples (Fuji)</h4>
+                            <p class="crop-meta">Quantity: 200 boxes</p>
+                        </div>
+                        <button class="btn-small btn-outline" onclick="this.parentElement.remove()">Remove</button>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaborator | Connecting Farms & Communities</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .landing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .landing-header {
+            margin-bottom: 4rem;
+        }
+        .landing-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #4ade80, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .landing-header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .role-cards {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .role-card {
+            width: 300px;
+            padding: 3rem 2rem;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .role-card:hover {
+            transform: translateY(-10px);
+        }
+        .role-card.farmer {
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+        .role-card.farmer:hover {
+            box-shadow: 0 15px 35px rgba(34, 197, 94, 0.2);
+        }
+        .role-card.resident {
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+        .role-card.resident:hover {
+            box-shadow: 0 15px 35px rgba(168, 85, 247, 0.2);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .farmer .icon-circle {
+            background: rgba(34, 197, 94, 0.2);
+        }
+        .resident .icon-circle {
+            background: rgba(168, 85, 247, 0.2);
+        }
+        .role-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .role-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blob blob-1" style="width: 600px; height: 600px; top: -100px; left: -100px; background: rgba(34, 197, 94, 0.3);"></div>
+    <div class="bg-blob blob-2" style="width: 500px; height: 500px; bottom: -50px; right: -50px; background: rgba(168, 85, 247, 0.2); animation-delay: -3s;"></div>
+    
+    <div class="landing-container">
+        <div class="landing-header">
+            <h1>Colaborator.</h1>
+            <p>Bridging the gap between local farming operations and community resident networks for a streamlined, fresh supply chain.</p>
+        </div>
+        
+        <div class="role-cards">
+            <a href="login.html" class="glass-panel role-card farmer">
+                <div class="icon-circle">🚜</div>
+                <h3>I'm a Farmer</h3>
+                <p>Manage crops, view direct community demand, and maximize yield.</p>
+            </a>
+            
+            <a href="resident-login.html" class="glass-panel role-card resident">
+                <div class="icon-circle">🏘️</div>
+                <h3>I'm a Resident</h3>
+                <p>Order fresh produce locally and pool requirements with your neighbors.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

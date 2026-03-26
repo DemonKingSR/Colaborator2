@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Network | Colaborator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="bg-blob blob-1" style="background: rgba(168, 85, 247, 0.4); width: 600px; height: 600px; top: -200px; left: -200px;"></div>
+    
+    <nav class="navbar">
+        <div class="brand">Colaborator<span>.</span>Network</div>
+        <div class="nav-links">
+            <span id="network-community-name" style="color: #c084fc; font-weight: 600; margin-right: 2rem;">Loading...</span>
+            <a href="resident-dashboard.html">My Portal</a>
+            <a href="resident-login.html" class="btn-small btn-outline" style="margin-left: 1rem; padding: 0.4rem 1rem;">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Main Content Area -->
+        <main class="main-content" style="grid-column: 1 / -1; max-width: 900px; margin: 0 auto; width: 100%;">
+            <!-- Network Overview -->
+            <section class="glass-panel" style="padding: 2.5rem;">
+                <div class="section-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 2rem;">
+                    <div>
+                        <h2 style="font-size: 2rem; background: linear-gradient(to right, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aggregated Community Demand</h2>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Total required volume from all residents within this network node.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px; text-align: center;">
+                        <span style="display: block; font-size: 2rem; font-weight: 700; color: #fff;" id="total-residents-node">1</span>
+                        <span style="font-size: 0.8rem; color: #cbd5e1;">Active Resident</span>
+                    </div>
+                </div>
+                
+                <div class="card-grid" id="aggregated-demand-grid">
+                    <!-- Cards injected by JS -->
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">These totals are linked directly to local farmer dashboards for fulfillment.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+</html>

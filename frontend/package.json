@@ -1,0 +1,8 @@
+{
+  "name": "colaborator-frontend",
+  "version": "1.0.0",
+  "description": "Frontend static server configuration",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 ."
+  }
+}

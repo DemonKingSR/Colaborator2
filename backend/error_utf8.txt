@@ -1,0 +1,22 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.colaborator:backend >-----------------------
+[INFO] Building backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ backend ---
+[INFO] Deleting C:\Users\shiva\OneDrive\Documents\Projects\Colaborator\backend\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.552 s
+[INFO] Finished at: 2026-03-26T11:28:41+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean (default-clean) on project backend: Failed to clean project: Failed to delete C:\Users\shiva\OneDrive\Documents\Projects\Colaborator\backend\target\classes\com\colaborator\backend\controller -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

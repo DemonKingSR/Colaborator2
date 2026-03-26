@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Sign In | Colaborator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-blob blob-1" style="background: rgba(168, 85, 247, 0.4);"></div>
+    <div class="bg-blob blob-2" style="background: rgba(236, 72, 153, 0.3);"></div>
+    
+    <div class="auth-container">
+        <div class="glass-panel auth-card">
+            <div class="auth-header">
+                <h1>Resident Login</h1>
+                <p>Access your community network and order fresh produce</p>
+            </div>
+            
+            <form id="resident-login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="resident@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="background: linear-gradient(135deg, #a855f7, #ec4899); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4);">Sign In</button>
+            </form>
+            
+            <div class="auth-footer">
+                Don't have an account? <a href="resident-signup.html" style="color: #c084fc;">Create Account</a>
+            </div>
+            <div class="auth-footer" style="margin-top: 1rem;">
+                Farmer? <a href="login.html">Farmer Login</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/community.js"></script>
+</body>
+</html>
