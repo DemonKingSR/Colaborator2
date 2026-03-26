@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password')?.value || '';
             
             try {
-                const response = await fetch('http://localhost:8081/api/users/login', {
+                const response = await fetch('https://your-backend.onrender.com/api/users/login', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({ email, password })
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const farmName = document.getElementById('farm-name')?.value || 'My Farm';
             
             try {
-                const response = await fetch('http://localhost:8081/api/users', {
+                const response = await fetch('https://your-backend.onrender.com/api/users', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({ username, email, password, role: 'FARMER', farmName })
@@ -139,7 +139,7 @@ async function loadFarmerCommunityOrders() {
     if (!list) return;
     
     try {
-        const res = await fetch('http://localhost:8081/api/orders/aggregated');
+        const res = await fetch('https://your-backend.onrender.com/api/orders/aggregated');
         if (!res.ok) throw new Error('Failed to fetch network orders');
         const grouped = await res.json();
         
